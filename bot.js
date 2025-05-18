@@ -670,7 +670,7 @@ Bot.initEvents = function () {
 require('dotenv').config();
 
 Bot.login = function () {
-  this.bot.login(env.TOKEN);
+  this.bot.login(process.env.TOKEN);
 };
 
 Bot.onReady = function () {
