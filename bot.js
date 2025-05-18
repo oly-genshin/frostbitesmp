@@ -10,7 +10,7 @@ DBM.version = "2.1.7";
 const DiscordJS = (DBM.DiscordJS = require("discord.js"));
 const http = require("http");
 
-const port = process.env.PORT || 4000;
+const port = 4000;
 http.createServer((req, res) => {
   res.writeHead(200, { "Content-Type": "text/plain" });
   res.end("Bot is running.\n");
@@ -670,7 +670,7 @@ Bot.initEvents = function () {
 require('dotenv').config();
 
 Bot.login = function () {
-  this.bot.login(process.env.TOKEN);
+  this.bot.login(TOKEN);
 };
 
 Bot.onReady = function () {
