@@ -675,7 +675,7 @@ Bot.login = function () {
 
 Bot.onReady = function () {
   process.send?.("BotReady");
-  console.log("Bot is ready!"); // Tells editor to start!
+  console.log("Bot is ready!");
   this.restoreVariables();
   this.registerApplicationCommands();
   this.preformInitialization();
