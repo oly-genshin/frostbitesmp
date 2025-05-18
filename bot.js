@@ -8,7 +8,15 @@ const DBM = {};
 DBM.version = "2.1.7";
 
 const DiscordJS = (DBM.DiscordJS = require("discord.js"));
-const port = process.env.PORT || 4000 
+const http = require("http");
+
+const port = process.env.PORT || 4000;
+http.createServer((req, res) => {
+  res.writeHead(200, { "Content-Type": "text/plain" });
+  res.end("Bot is running.\n");
+}).listen(port, () => {
+  console.log(`HTTP server listening on port ${port}`);
+});
 
 const requiredDjsVersion = "13.14.0";
 if (requiredDjsVersion.localeCompare(DiscordJS.version, { numeric: true, sensitivity: "base" }) > 0) {
