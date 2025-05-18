@@ -658,8 +658,10 @@ Bot.initEvents = function () {
   Events.registerEvents(this.bot);
 };
 
+require('dotenv').config();
+
 Bot.login = function () {
-  this.bot.login(Files.data.settings.token);
+  this.bot.login(process.env.TOKEN);
 };
 
 Bot.onReady = function () {
