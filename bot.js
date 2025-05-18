@@ -8,6 +8,7 @@ const DBM = {};
 DBM.version = "2.1.7";
 
 const DiscordJS = (DBM.DiscordJS = require("discord.js"));
+const port = process.env.PORT || 4000 
 
 const requiredDjsVersion = "13.14.0";
 if (requiredDjsVersion.localeCompare(DiscordJS.version, { numeric: true, sensitivity: "base" }) > 0) {
